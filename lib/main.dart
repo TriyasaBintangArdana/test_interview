@@ -6,8 +6,6 @@ import 'package:test_interview/screen/home_screen.dart';
 import 'package:test_interview/screen/login_view.dart';
 
 void main() {
-
-
   runApp(
     MultiProvider(
       providers: [

@@ -7,9 +7,9 @@ class NewsProvider extends ChangeNotifier{
 
   bool isLoading = false;
   NewsModel? newsApi;
-  bool get _isLoading => isLoading;
-
   Future<void> loadNews() async{
+    isLoading = true;
+  notifyListeners(); 
     try {
      newsApi = await _apiService.fetchApi('tesla');
       print(newsApi?.articles?.first.title ?? 'Kosong');
